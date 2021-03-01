@@ -1,0 +1,61 @@
+1.i
+While loop
+My biggest int = 2147483647 
+INT_MAX = 2147483647 
+For loop
+My biggest int = 2147483647 
+INT_MAX = 2147483647 
+Do-While loop
+My biggest int = 2147483647 
+INT_MAX = 2147483647 
+
+ 1.ii
+While loop
+My smallest int = -2147483648 
+INT_MIN = -2147483648 
+For loop
+My smallest int = -2147483648 
+INT_MIN = -2147483648 
+Do-While loop
+My smallest int = -2147483648 
+INT_MIN = -2147483648 
+
+ 1.iii
+While loop
+My float epsilon = 0.0000001192 
+FLT_EPSILON = 0.0000001192 
+My double epsilon = 2.220446049e-16 
+DBL_EPSILON = 2.220446049e-16 
+My long double epsilon = 1.084202172e-19 
+LDBL_EPSILON = 1.084202172e-19 
+
+For loop
+My float epsilon = 0.0000001192 
+FLT_EPSILON = 0.0000001192 
+My double epsilon = 2.220446049e-16 
+DBL_EPSILON = 2.220446049e-16 
+My long double epsilon = 1.084202172e-19 
+LDBL_EPSILON = 1.084202172e-19 
+
+Do-while loop
+My float epsilon = 0.0000001192 
+FLT_EPSILON = 0.0000001192 
+My double epsilon = 2.220446049e-16 
+DBL_EPSILON = 2.220446049e-16 
+My long double epsilon = 1.084202172e-19 
+LDBL_EPSILON = 1.084202172e-19 
+
+ 2.i
+sum_up_float = 15.4036827087 
+sum_down_float = 18.8079185486 
+
+ 2.ii
+The difference between sum_up_float and sum_down_float is due to rounding errors. When we calculate sum_up_float we start with a large number and add ever so smaller numbers to it. At some point the numbers we add get smaller then the precision of the number we started with and the sum will terminate. On the other hand when we calculate sum_down_float, we start with a smaller number and add increasingly larger numbers to the sum. Doing this, the sum will not terminate because no term is smaller than the precision of the sum. This results in a smaller rounding error and thus we get a larger number as we see.
+ 2.iii
+No I don't think the sum converges. Only the first sum where the last terms vanish due to rounding.
+ 2.iv
+sum_up_double = 21.37163115 
+sum_down_double = 21.37163115 
+Here we don't get the rounding errors we did with float, since double has a higher precision than float.
+ 3.i
+Function implemented

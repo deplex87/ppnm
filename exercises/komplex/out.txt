@@ -1,0 +1,7 @@
+testing komplex_add and komplex_sub
+a= (1,2)
+b= (3,4)
+a+b should   =  (4,6)
+a+b actually =  (4,6)
+b-a should   =  (2,2)
+b-a actually =  (2,2)
