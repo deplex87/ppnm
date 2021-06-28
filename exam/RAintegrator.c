@@ -1,6 +1,7 @@
 #include <math.h>
 #include <assert.h>
 #include <complex.h>
+#include <stdio.h>
 
 double complex adapt24(double complex f(double complex), double complex a, double complex b, double delta, double eps, double complex f2, double complex f3, int numOfEvals){
     
@@ -35,13 +36,26 @@ double complex integrate(double complex f(double complex), double complex a, dou
     return adapt24 (f, a, b, delta, eps, f2, f3, numOfEvals);
 }
 
-double complex OpenQuadCC_integrate(double complex f(double complex), double complex a, double complex b, double delta, double eps){
+double complex OpenQuadCC_integrate(double complex f(double complex), double complex a, double complex b, double delta, double eps, FILE* plotfile){
     int numOfEvals = 0;
     double complex f2 = f(a + 2 * (b - a) / 6);
     double complex f3 = f(a + 4 * (b - a) / 6);
     
     double complex IntervalTransformation (double complex theta){
         return f((a + b) / 2 + (b - a) * cos(theta) / 2 )*(b - a) * sin(theta) / 2;
+    }
+    
+    if(plotfile != NULL){
+        fprintf(plotfile,"%g\t%g\n",creal(a),cimag(a));
+        fprintf(plotfile,"%g\t%g\n",creal(b),cimag(b));
+        
+        FILE* points = fopen("points.txt", "w");
+        fprintf(points,"%g\t%g\n",creal(a+(b-a)/6.0),cimag(a+(b-a)/6.0));
+		fprintf(points,"%g\t%g\n",creal(a+2.0*(b-a)/6.0),cimag(a+2.0*(b-a)/6.0));
+		fprintf(points,"%g\t%g\n",creal(a+4.0*(b-a)/6.0),cimag(a+4.0*(b-a)/6.0));
+		fprintf(points,"%g\t%g\n",creal(a+5.0*(b-a)/6.0),cimag(a+5.0*(b-a)/6.0));
+        fclose(points);
+        
     }
 
     return adapt24(IntervalTransformation, 0, M_PI, delta, eps, f2, f3, numOfEvals);

@@ -1,0 +1,12 @@
+    set terminal png
+	set output "IntegralPlot.png"
+	set key outside
+	set c1range [0:5]
+	set tics out
+	set xlabel "Real"
+	set ylabel "Imaginary"
+	set title "Integration in a straight line on a complex plane"
+	plot [-1.8:2.1][-2:2] "plane.txt" using 1:2:3 with colormap title "Complex plane of $\frac{\log{z}}{\sqrt{z}}$"\
+	,"line.txt" using 1:2 with lines color red title "Line integrated along"\
+	,"points.txt" using 1:2 with points pointtype 11 color processblue title "First division of line"\
+	,"line.txt" using 1:2 with points pointtype 17 color springgreen title "\parbox{6cm}{Start point: -1.5 - 1.8i\newline \noindent End point: 2.0 + 1.5i}"

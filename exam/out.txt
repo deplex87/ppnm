@@ -1,7 +1,22 @@
-Task A
+Exam Project
 
-We test our adaptive integrator on different integral:
-Our numerical integration of the complex function 1/(2*sqrt(z)) from 0 to 1.0 + 2i gives the following results:
-Numerical result = 2.54399 + 1.57227i
-numOfEvals = 8504
+We test our adaptive integrator on different integrals:
+Using the recursive adaptive routine on the complex function 1/(2*sqrt(z)) from 0 to 3.0 + 5i gives the following results:
+Numerical result = 2.10126 + 1.18971i
+Exact result = sqrt(3 + 5i)
+Exact w. decimals = 2.101303 + 1.189737i
+numOfEvals = 8496
+
+Using open quadrature with Clenshaw–Curtis variable transformation on the complex function 1/(2*sqrt(z)) from 0 to 3.0 + 5i gives the following results:
+Numerical result = 2.10129 + 1.18972i
+Exact result = sqrt(3 + 5i)
+Exact w. decimals = 2.101303 + 1.189737i
+numOfEvals = 124
+Here we see that it takes a lot less evaluations using this instead of recursive adaptive integrator.
+
+Using open quadrature with Clenshaw–Curtis variable transformation on the complex function log(z)/sqrt(z) from 0 to 4.0 + 8i gives the following results:
+Numerical result = 3.87772 + 0.604473i
+Exact result = 4 sqrt(1 + 2 i) (-2 + log(4 + 8 i))
+Exact w. decimals = -2.509655 + 6.233921i
+numOfEvals = 244
 
