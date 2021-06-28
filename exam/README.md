@@ -1,6 +1,6 @@
 My studentnumber is 201707128, which means that I've done examproject number 6.
 
------------------------------------------------------------------6---------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
 
 Adaptive integration of complex-valued functions
 
@@ -22,7 +22,10 @@ functions. In the file output.txt are both results with recursive adaptive integ
 shown. Furthermore, I've plotted one of the integrations, which also shows the first division of the straight line
 in the algorithm.
 
+---------------------------------------------------------------------------------------------------------------------------------
+
 ----------------------------------------------------------Files in folder---------------------------------------------------------
+
 IntegralPlot.gpi    :   This file holds all the pyxplot code that generates the plot IntegralPlot.png
 
 IntegralPlot.png    :   This image shows the line which i integrate along for one of the functions that
