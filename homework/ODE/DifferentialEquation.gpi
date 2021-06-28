@@ -1,0 +1,10 @@
+set term png
+set output "DifferentialEquation.png"
+set key outside
+set fontsize 1
+set xlabel "t"
+set ylabel "Function value"
+set title "Solution to $\frac{d^2 y}{dt^2} = -y$"
+plot "DifferentialEquation.txt" using 1:2 with lines linewidth 3 color blue title "y from solving the ODE"\
+, "DifferentialEquation.txt" using 1:3 with lines linewidth 3 color green title "$\frac{dy}{dt}$ from solving the ODE"\
+, "sine.txt" using 1:2 with lines linetype 2 linewidth 3 color red title "sin(t)"\

@@ -1,0 +1,31 @@
+Task A
+
+We start by trying to calculate the integral of 1/sqrt(x + y) from 0 to 1 in both x and y:
+Numerical result = 1.10453 +/- 0.000128917
+Analytical result = 1.10457
+
+Next we integrate y/e^(x^2) from 0 to 1 in both x and y:
+Numerical result = 0.373462 +/- 7.74236e-05
+Analytical result = 0.373412
+
+Lastly we calculate the integral given to us in the description of the task:
+Numerical result = 1.39245 +/- 0.00406745 
+Analytical result = 1.3932 
+
+
+Task B
+
+Now we test the integrator with quasi-random sequences. 
+First we do the calculation for the integral 1/sqrt(x + y) from 0 to 1 in both x and y:
+Numerical result = 1.10456 +/- 2.22339e-07
+Analytical result = 1.10457
+
+Now we do the same thing for the integral y/e^(x^2) from 0 to 1 in both x and y:
+Numerical result = 0.373412 +/- 1.93917e-07
+Analytical result = 0.373412
+
+Lastly we do it again for the integral given in task A:
+Numerical result = 1.39015 +/- 0.00112105
+Analytical result = 1.3932 
+
+

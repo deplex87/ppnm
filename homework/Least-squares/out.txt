@@ -1,0 +1,13 @@
+#index -1: Task A and B
+
+The coefficients found from doing the linear fit is:
+a      = 4.95867 +/- 0.0298375 
+lambda = 0.171379 +/- 0.00353553 
+From here we find that the half-life time of 224Ra is:
+t_1/2 = 4.04452 +/- 0.120375 days 
+which is calculated from the covariance matrix of the coefficients given by:
+0.000890278   8.75e-05 
+  8.75e-05   1.25e-05 
+
+The result is not consistent with the modern half-life time of 3.66 days, which could be due to the presence of other radium isoptopes in the source. For example 223Ra have a half life time of 11.43 days and 226Ra have a half life time of 1600 years. Both 223Ra and 226Ra come from alpha decay of radon isotopes, just like 224Ra does, so this could definitely be an explanation.
+

@@ -1,0 +1,17 @@
+Task A
+
+I test my root finding routine with the function f(x) = 1 + (x - 5)^2 + (y - 7)^2 and get the following results:
+My guess of the root: x = 3 and y = 12
+The root found by routine: x = 5 and y = 7.00001
+The real root is: x = 5 and y = 7
+
+Now we test the routine on the Rosenbrock Valley function f(x,y) = (1-x)^2+100(y-x^2)^2:
+My guess of the root: x = 0.5 and y = 0.5
+The root found by routine: x = 0.996829 and y = 0.993671
+The real root is: x = 1 and y = 1
+
+Task B
+
+Now we want to find the lowest energy solution to the hydrogen atom by using the root routine:
+Lowest energy state found by root finding = -0.499981
+ Furthermore see hydrogen.png

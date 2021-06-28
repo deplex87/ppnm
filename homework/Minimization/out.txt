@@ -1,0 +1,21 @@
+Task A
+
+We begin by testing the routine by finding the minimum of the Rosenbrock's valley function f(x,y) = (1 - x)^2 + 100*(y - x^2)^2.
+We guess that the minimum is found at x = 0 and y = 0.
+The minimum is found to be at x = 0.999996 and y = 0.999991
+The real minimum is at x = 1 and y = 1.
+This calculation required in total 26 steps.
+
+Now we continue and try to minimize the Himmelblaus function, f(x,y) = (x^2 + y - 11)^2 + (x + y^2 - 7)^2.
+We guess that the minimum is found at x = 2.5 and y = 1.5.
+The minimum is found to be at x = 3 and y = 2
+The actual minima of the function are (x, y) = (3, 2), (-3.78, -3.28), (-2.80, 3.13) and (3.58, -1.84)
+This calculation required in total 7 steps.
+
+
+Task B
+
+Using the minimization routine to fit the data we find the following results:
+Mass = 125.972187 GeV
+Width = 2.086331
+A = 9.876217 

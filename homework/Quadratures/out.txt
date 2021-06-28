@@ -1,0 +1,63 @@
+Task A
+
+We test our adaptive integrator on different integral:
+Our numerical integration of the integral of sqrt(x) from 0 to 1 gives the following results:
+Analytical result = 0.6666666667
+Numerical result = 0.6669539091
+Estimated error = 0.0007716487114
+Actual error = 0.000287242388
+numOfEvals = 16
+
+Our numerical integration of the integral of 4 * sqrt(1 - x^2) from 0 to 1 gives the following results:
+Analytical result = 3.141592654
+Numerical result = 3.141834578
+Estimated error = 0.002511826016
+Actual error = 0.0002419244375
+numOfEvals = 28
+
+Task B
+
+Our numerical integration of the integral of 1 / sqrt(x) from 0 to 1 using open quadrature with Clenshaw–Curtis variable transformation gives the following results:
+Analytical result = 2
+Numerical result = 2.000012579
+Estimated error = 0.001163444453
+Actual error = 1.257855297e-05
+numOfEvals = 124
+
+GSL numerical integration of the integral of 1 / sqrt(x) from 0 to 1 using gsl_integration_cquad the following results:
+Analytical result = 2
+Numerical result = 1.999709391
+Estimated error = 0.001847821535
+Actual error = 0.0002906085872
+numOfEvals = 253
+
+Our numerical integration of the integral of ln(x) / sqrt(x) from 0 to 1 using open quadrature with Clenshaw–Curtis variable transformation gives the following results:
+Analytical result = -4
+Numerical result = -3.999866824
+Estimated error = 0.003371762072
+Actual error = 0.0001331761852
+numOfEvals = 200
+
+GSL numerical integration of the integral of ln(x) / sqrt(x) from 0 to 1 using gsl_integration_cquad the following results:
+Analytical result = -4
+Numerical result = -3.99965765
+Estimated error = 0.003517011306
+Actual error = 0.000342350101
+numOfEvals = 371
+
+Our numerical integration of the integral of 4 * sqrt(1 - x^2) from 0 to 1 using open quadrature with Clenshaw–Curtis variable transformation gives the following results:
+Analytical result = 3.14159265358979311599796346854
+Numerical result = 3.14159265356728623075355244509
+Estimated error = 7.10951671556068248762844455357e-06
+Actual error = 2.25068852444110234500840306282e-11
+numOfEvals = 1100
+
+GSL numerical integration of the integral of 4 * sqrt(1 - x^2) from 0 to 1 using gsl_integration_cquad the following results:
+Analytical result = 3.141592653589793115997963
+Numerical result = 3.141592653589794004176383
+Estimated error = 2.632721730796430479402578e-13
+Actual error = 8.881784197001252323389053e-16
+numOfEvals = 1357
+
+Task C
+

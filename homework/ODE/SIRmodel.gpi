@@ -1,0 +1,9 @@
+set term png
+set xlabel "time in days"
+set ylabel "Number of people"
+set key outside
+set output "SIRmodel.png"
+set title "SIR model of Denmark with $T_c = 2$ and $T_r = 10$"
+plot "SIRmodel.txt" using 1:2 with line linewidth 3 col blue title "$S(t)$ with $S_0 = 5.741.347$"\
+, "SIRmodel.txt" using 1:3 with line linewidth 3 col green title "$I(t)$ with $I_0 = 92.000$"\
+, "SIRmodel.txt" using 1:4 with line linewidth 3 col red title "$R(t)$ with $R_0 = 95.000$"\

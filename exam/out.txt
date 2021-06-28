@@ -1,0 +1,7 @@
+Task A
+
+We test our adaptive integrator on different integral:
+Our numerical integration of the complex function 1/(2*sqrt(z)) from 0 to 1.0 + 2i gives the following results:
+Numerical result = 2.54399 + 1.57227i
+numOfEvals = 8504
+

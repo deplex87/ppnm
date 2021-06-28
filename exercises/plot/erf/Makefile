@@ -5,7 +5,7 @@ LDLIBS = $(shell gsl-config --libs)
 .PHONEY:default
 default: erf.pyxplot.png
 
-erf.pyxplot.png: out.data.txt Makefile data.txt
+erf.pyxplot.png: outputdata.txt Makefile data.txt
 	echo '\
 	set terminal png;\
 	set output "$@";\
@@ -15,19 +15,19 @@ erf.pyxplot.png: out.data.txt Makefile data.txt
 	set ylabel "y";\
 	set title "Error function";\
 	plot \
-	 "$<" using 1:2 with line title "erf from math.h"\
+	 "$<" using 1:2 with line title "math.h erf"\
 	,"$<" using 1:3 with line title "gsl-sf-erf"\
-	,"$<" using 1:4 with line title "myerf"\
-	,"data.txt" using 1:2 with points pointtype 2 title "tabulated data"\
-	' | tee tmp.gpi | pyxplot
+	,"$<" using 1:4 with line title "myerf.c"\
+	,"data.txt" using 1:2 with points pointtype 2 title "Tabulated data"\
+	' | tee erf.pyxplot.gpi | pyxplot
 
-out.data.txt: main
+outputdata.txt: main
 	./$< > $@
 
 main: main.o myerf.o
-main.o myerf.o: myerf.h
+main.o Erf.o: myerf.h
 
 
 .PHONEY:clean
 clean:
-	$(RM) *.o main *.png out.data.txt tmp.gpi
+	$(RM) *.o main *.png outputdata.txt tmp.gpi
