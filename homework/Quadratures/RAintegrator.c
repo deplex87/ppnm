@@ -29,34 +29,6 @@ double integrate(double f(double), double a, double b, double delta, double eps,
     double f2 = f(a + 2 * (b - a) / 6);
     double f3 = f(a + 4 * (b - a) / 6);
     return adapt24 (f, a, b, delta, eps, f2, f3, numOfEvals, err);
-    
-//     if(isinf(-a)){          // Check if we integrate from -infinity
-//         if(isinf(b)){       // Check if we integrate to infinity while integrating from -infinity
-// 
-//             double IntervalTransformation (double t){
-//                 return f(t / (1 - t * t)) * (1 + t * t) / pow(1 - t * t, 2);
-//             }
-//             
-//             return adapt24 (IntervalTransformation, -1, 1, delta, eps, f2, f3, numOfEvals, err);
-//             
-//         }else{              // Check if we integrate to a finite number while integrating from -infinity
-//             
-//             double IntervalTransformation (double t){
-//                 return f(b - (1 - t) / t) / (t * t);
-//             }
-//             
-//             return adapt24 (IntervalTransformation, 0, 1, delta, eps, f2, f3, numOfEvals, err);
-//         }
-//     }else if(isinf(b)){      // Check if we integrate to infinity while integrating from a finite number
-//         
-//         double IntervalTransformation (double t){
-//             return f(a + t / (1 - t)) / (1 - t * t);
-//         }
-//         
-//         return adapt24 (IntervalTransformation, 0, 1, delta, eps, f2, f3, numOfEvals, err);
-//     }else{
-//         
-//     }
 }
 
 double OpenQuadCC_integrate(double f(double), double a, double b, double delta, double eps, double* err){

@@ -1,0 +1,5 @@
+Integration of the function log(x)/sqrt(x) from 0 to 1:
+Exact result     = -4.00000000000000000000
+Numerical result = -4.00000000000008526513
+Estimated error  =  0.00000000000013544721
+Actual error     = -0.00000000000008526513

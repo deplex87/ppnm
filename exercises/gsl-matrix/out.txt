@@ -1,0 +1,8 @@
+We have the left side b =
+      6.23       5.37       2.29 
+Using GSL's Householding solver to solve for x in Ax = b, we should now expect that b = Ax =
+      6.23       5.37       2.29 
+Which we see is true, so the solver most work.
+ The resulting x vector is:
+x =
+   -1.1379   -2.83303   0.851459 
